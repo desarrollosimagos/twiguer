@@ -92,7 +92,7 @@ class RegisterController extends Controller
 
 		$this->activationService->sendActivationMail($user);
 
-		return redirect('/login')->with('status', 'We sent you an activation code. Check your email.');
+		return redirect('/validate')->with('status', 'Enviamos un codigo de verificacion a su telefono. Ingreselo a continuacion');
 	}
 	
 	public function activateUser($token)
